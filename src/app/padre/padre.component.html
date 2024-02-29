@@ -1,1 +1,14 @@
-<h1>Hola de nuevo en ANGUALR</h1>
+<h1>Contador: </h1>
+<p>{{valorContador}}</p>
+
+
+
+<app-hijo [recibeHijo] = 'messagePadre' (mensajeDesdeHijo)="recibirMensaje($event)"
+(incrementarDesdeHijo)="Incrementar()"
+(decrementarDesdeHijo)="Decrementar()"
+></app-hijo>
+<h5>El mensaje recibido desde el hijo es: {{mensajeRecibido}}</h5>
+
+<h1>{{nombre}}</h1>
+<button type="button" (click)="saludar()">Saludar</button>
+<button type="button" (click)="preguntar()">Preguntar por hijo</button>

@@ -1,0 +1,12 @@
+<h1>El mensaje fué: </h1>
+<p>{{recibeHijo}}</p>
+<div>
+    <label for="entrada">Escribí un mensaje para el padre: </label>
+    <input type="text" id="entrada" [(ngModel)]="mensaje" >
+    <button type="button" (click)="enviarMensaje()">Enviar</button>
+</div>
+<hr>
+<div>
+    <button (click)="decrementar()">Decrementar</button>
+    <button (click)="incrementar()">Incrementar</button>
+</div>
