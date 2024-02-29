@@ -6,7 +6,7 @@ import { Directive, ElementRef } from '@angular/core';
 export class EstiloHermanosDirective {
 
   constructor(private el: ElementRef) { 
-    this.el.nativeElement.style.textTransform = 'capitalize';
+    this.el.nativeElement.style.textTransform = 'capitalize'; 
   }
 
 }
