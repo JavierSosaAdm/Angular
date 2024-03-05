@@ -9,6 +9,10 @@ import { FormsModule } from '@angular/forms';
 import { HermanoComponent } from './hermano/hermano.component';
 import { EstiloHermanosDirective } from './estilo-hermanos.directive';
 import { PipePersonalizadoPipe } from './pipe-personalizado.pipe';
+import { HomeComponent } from './home/home.component';
+import { DetailComponent } from './detail/detail.component';
+import { ContactComponent } from './contact/contact.component';
+import { ProductsComponent } from './products/products.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +21,11 @@ import { PipePersonalizadoPipe } from './pipe-personalizado.pipe';
     HijoComponent,
     HermanoComponent,
     EstiloHermanosDirective,
-    PipePersonalizadoPipe
+    PipePersonalizadoPipe,
+    HomeComponent,
+    DetailComponent,
+    ContactComponent,
+    ProductsComponent
   ],
   imports: [
     BrowserModule,
