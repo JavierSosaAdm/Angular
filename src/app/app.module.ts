@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PadreComponent } from './padre/padre.component';
 import { HijoComponent } from './hijo/hijo.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HermanoComponent } from './hermano/hermano.component';
 import { EstiloHermanosDirective } from './estilo-hermanos.directive';
 import { PipePersonalizadoPipe } from './pipe-personalizado.pipe';
@@ -30,7 +30,8 @@ import { ProductsComponent } from './products/products.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule, // Formularios de tipo PLANTILLA
+    ReactiveFormsModule // Formularios del tipo REACTIVO
   ],
   providers: [],
   exports: [],

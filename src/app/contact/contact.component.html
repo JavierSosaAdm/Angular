@@ -1,1 +1,90 @@
-<p>contact works!</p>
+<!-- FORMULARIO REACTIVO -->
+<div class= "container">
+  <form [formGroup]="contactForm" (ngSubmit)="enviar()">
+      <div class="mb-3">
+        <label for="name" class="form-label">Nombre</label>
+        <input [ngClass]="{'is-invalid': hasErrors('name', 'required') || hasErrors('name', 'minlength')}"
+         type="text" class="form-control" id="name" formControlName="name">
+        <div class="text-danger" *ngIf="hasErrors('name', 'required')">
+          Nombre requerido
+        </div>
+        <div class="text-danger" *ngIf="hasErrors('name', 'minlength')">
+          Mínimo de 3 caracteres
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="lastName" class="form-label">Apellido</label>
+        <input [ngClass]="{'is-invalid': hasErrors('lastName', 'required') || hasErrors('lastName', 'minlength')}"
+         type="text" class="form-control" id="lastName" formControlName="lastName">
+        <div class="text-danger" *ngIf="hasErrors('lastName', 'required')">
+          Apellido requerido
+        </div>
+        <div class="text-danger" *ngIf="hasErrors('lastName', 'minlength')">
+          Mínimo de 3 caracteres
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="dniType" class="form-label">Tipo de identificación: </label>
+        <select class="form-select" id="dniType" formControlName="dniType">
+          <option value="DNI">DNI</option>
+          <option value="Pasaporte">Pasaporte</option>
+          <option value="Cédula">Cédula</option>
+        </select>
+      </div>
+
+      <div class="mb-3">
+        <label for="dni" class="form-label">{{ dniType }}</label>
+        <input [ngClass]="{'is-invalid': hasErrors('dni', 'required') || hasErrors('dni', 'minlength')}"
+         type="text" class="form-control" id="name" formControlName="dni">
+        <div class="text-danger" *ngIf="hasErrors('dni', 'required')">
+          {{ dniType }} requerido
+        </div>
+        <div class="text-danger" *ngIf="hasErrors('dni', 'minlength')">
+          Mínimo de 6 caracteres
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input [ngClass]="{'is-invalid': hasErrors('email', 'required') || hasErrors('email', 'email')}"
+        type="email" class="form-control" id="email" formControlName="email">
+        <div class="text-danger" *ngIf="hasErrors('email', 'email')">
+          Formato E-mail invalido.
+        </div>
+        <div class="text-danger" *ngIf="hasErrors('email', 'required')">
+          E-mail requerido.
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class= "container">
+    <form #myForm="ngForm" (ngSubmit)="enviar()">
+        <div class="mb-3">
+          <label for="name" class="form-label">Nombre</label>
+          <input type="text" class="form-control" id="name" 
+          [(ngModel)] ="user.name" required [ngModelOptions]="{standalone: true}">
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" class="form-control" id="email" 
+          [(ngModel)] = "user.email" required [ngModelOptions]="{standalone: true}">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+</div> -->
