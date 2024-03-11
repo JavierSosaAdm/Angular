@@ -13,6 +13,7 @@ import { HomeComponent } from './home/home.component';
 import { DetailComponent } from './detail/detail.component';
 import { ContactComponent } from './contact/contact.component';
 import { ProductsComponent } from './products/products.component';
+import { DniComponent } from './contact/dni/dni.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { ProductsComponent } from './products/products.component';
     HomeComponent,
     DetailComponent,
     ContactComponent,
-    ProductsComponent
+    ProductsComponent,
+    DniComponent
   ],
   imports: [
     BrowserModule,
