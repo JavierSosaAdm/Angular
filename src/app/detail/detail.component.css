@@ -1,0 +1,10 @@
+.center{
+    display:flex;
+    justify-content: center;
+}
+
+.card{
+    background-color: rgba(0, 119, 255, 0.13);
+    width: 15vw;
+    object-fit: scale-down;
+}
